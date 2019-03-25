@@ -26,7 +26,14 @@ select \* from customers where customername like '%market%'
 
 ## add a customer record for _"The Shire"_, the contact name is _"Bilbo Baggins"_ the address is _"1 Hobbit-Hole"_ in _"Bag End"_, postal code _"111"_ and the country is _"Middle Earth"_.
 
+insert into customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+values ("The Shire", "Bilbo Baggins", "1 Hobbit-Hole", "Bag End", "111", "Middle Earth" )
+
 ## update _Bilbo Baggins_ record so that the postal code changes to _"11122"_.
+
+update customers
+set postalcode = '11122'
+where customerid = 92
 
 ## list orders grouped by customer showing the number of orders per customer. _Rattlesnake Canyon Grocery_ should have 7 orders.
 
